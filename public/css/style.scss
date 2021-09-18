@@ -1,0 +1,268 @@
+$pink: #dbaff7;
+$ocean-blue: #2eb2e8;
+$light-blue: #bbe6f7;
+$grey: #727272;
+$light-grey: #8E8E8E;
+$light: #F7F7F7;
+$yellow: #D7D5AE;
+$road: #515051;
+
+body {
+  background: $pink
+}
+
+.box {
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+  width: 700px;
+  height: 500px
+}
+
+.car {
+  position: absolute;
+  border: 4px solid $grey;
+  background: $light;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 90px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 70%;
+  height: 50%;
+  left: 15%;
+  top: 28%;
+  overflow: hidden
+}
+
+.road {
+  position: absolute;
+  background: $road;
+  height: 1%;
+  width: 80%;
+  bottom: 9%;
+  left: 10%;
+  opacity: 0.8
+}
+
+.bottom-car {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  border-top: 4px solid $grey;
+  bottom: 0%;
+  background: $ocean-blue;
+}
+
+.split-line {
+  position: absolute;
+  background: $grey;
+  height: 100%;
+  width: 1.2%;
+  left: 63%
+}
+
+.left-window {
+  position: absolute;
+  border: 4px solid $grey;
+  background: $light-blue;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 25%;
+  height: 33%;
+  left: 5%;
+  top: 10%
+}
+
+.center-window {
+  position: absolute;
+  border: 4px solid $grey;
+  background: $light-blue;
+  border-radius: 10px;
+  width: 25%;
+  height: 33%;
+  left: 35.5%;
+  top: 10%
+}
+
+.right-window {
+  position: absolute;
+  border: 4px solid $grey;
+  background: $light-blue;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 25%;
+  height: 33%;
+  right: 6%;
+  top: 10%
+}
+
+.left-wheel {
+  position: absolute;
+  border: 4px solid $grey;
+  background: $light-grey;
+  border-radius: 50%;
+  height: 18%;
+  width: 13%;
+  left: 25%;
+  bottom: 12.5%;
+  z-index: 2;
+  animation: spinTheWheel 6s infinite linear
+}
+
+.left-wheel-line {
+  position: absolute;
+  height: 101%;
+  width: 6%;
+  left: 47%;
+  transform: rotate(-40deg);
+  background: $grey
+}
+
+.left-wheel-circle {
+  position: absolute;
+  border-radius: 50%;
+  height: 20%;
+  width: 20%;
+  left: 36%;
+  top: 36%;
+  border: 4px solid $grey;
+  background: $light
+}
+
+.right-wheel {
+  position: absolute;
+  border: 4px solid $grey;
+  background: $light-grey;
+  border-radius: 50%;
+  height: 18%;
+  width: 13%;
+  right: 21.5%;
+  bottom: 12.5%;
+  z-index: 2;
+  animation: spinTheWheel 6s infinite linear
+}
+
+.right-wheel-line {
+  position: absolute;
+  height: 101%;
+  width: 6%;
+  left: 47%;
+  transform: rotate(-40deg);
+  background: $grey
+}
+
+.right-wheel-circle {
+  position: absolute;
+  border-radius: 50%;
+  height: 20%;
+  width: 20%;
+  left: 36%;
+  top: 36%;
+  border: 4px solid $grey;
+  background: $light
+}
+
+.back-wheel {
+  position: absolute;
+  background: $light-grey;
+  border: 4px solid $grey;
+  height: 20%;
+  width: 5%;
+  border-radius: 10px;
+  left: 11%;
+  bottom: 30%;
+  z-index: 2
+}
+
+.light {
+  position: absolute;
+  border: 4px solid $grey;
+  background: $yellow;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 6%;
+  width: 3%;
+  right: 11.8%;
+  bottom: 40%;
+}
+
+.cloud {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  right: 0%;
+  top: 2%;
+  animation: cloudMove 25s infinite linear
+}
+
+.bottom {
+  position: absolute;
+  background: white;
+  height: 35%;
+  width: 100%;
+  border-radius: 50px;
+  bottom: 20%;
+}
+
+.top-left {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  height: 50%;
+  width: 50%;
+  left: 10%;
+  top: 10%
+}
+
+.top-right {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  height: 70%;
+  width: 50%;
+  right: 10%;
+  top: 5% 
+}
+
+@keyframes spinTheWheel {
+  0% {
+    transform: rotate(0deg)
+  }
+  25% {
+    transform: rotate(90deg)
+  }
+  50% {
+    transform: rotate(180deg)
+  }
+  75% {
+    transform: rotate(270deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes cloudMove {
+  0% {
+    right: 0%
+  }
+  20% {
+    right: 16%
+  }
+  40% {
+    right: 32%
+  }
+  60% {
+    right: 48%
+  }
+  80% {
+    right: 64%
+  }
+  100% {
+    right: 80%
+  }
+}
